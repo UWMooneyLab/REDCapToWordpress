@@ -32,7 +32,3 @@ from REDCap to this patient portal.
 The current setup of this plugin is optimized for the FindMyVariant study patient portal.
 To configure the layout for your study, see the /includes/patient_profile.php file to adjust
 what your patients will see upon loading this page.
-
-
-
-
