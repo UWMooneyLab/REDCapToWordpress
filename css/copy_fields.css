@@ -1,0 +1,34 @@
+.copy_button {
+	margin-left: 5px;
+	padding-right: 6px;
+	padding-left: 6px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #ffffff;
+	border: solid;
+	background-color: #ad0c02;
+	border-color: #ad0c02;
+	border-radius: 5px;
+}
+
+.copy_button:hover {
+    font-weight: bold;
+	border-color: #7a0902;
+	background-color: #7a0902;
+}
+
+.copy_field {
+    padding: 5px;
+    color: black;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.pedigree {
+	max-width: 800px;
+}
+
+.pedigree:hover {
+	max-width: 100%;
+	border: solid;
+}

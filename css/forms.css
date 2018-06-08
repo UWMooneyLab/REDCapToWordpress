@@ -1,0 +1,47 @@
+.redcap_form label { display: block; width: 50%; }
+.redcap_form input[type="text"], .redcap_form input[type="password"],
+.redcap_form input[type="email"] {
+	padding: 4px 8px;
+	background: #f0f0f0;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+}
+
+.redcap_form input[type="text"]:focus, .redcap_form input[type="password"]:focus,
+.redcap_form input[type="email"]:focus {
+	border-color: #aaa;
+}
+
+
+.redcap_form input[type="submit"] {
+	font-size: x-large;
+	padding: 10px;
+	margin-top: 10px;
+	color: #ffffff;
+	border: solid;
+	background-color: #ad0c02;
+	border-color: #ad0c02;
+	border-radius: 5px;
+}
+
+.redcap_form input[type="submit"]:hover {
+	font-size: x-large;
+	font-weight: bold;
+	border: solid;
+	border-color: #7a0902;
+	border-radius: 5px;
+	padding: 10px;
+	color: #ffffff;
+	background-color: #7a0902;
+	border-width: 4px;
+}
+ 
+.redcap_errors {
+	padding: 8px; 
+	border: 2px solid #f50; 
+	margin: 0 0 15px; 
+	border-radius: 15px;
+	}
+.redcap_errors .success_added {font-size: large; }
+
+
