@@ -7,7 +7,8 @@ to administration of user accounts and registering new users to the site.
 
 // registration form fields, what is displayed to the administrator on their home page
 function registration_form_fields() {
-	ob_start(); ?>	
+
+	ob_start(); ?>
 		<?php 
 		// show any error messages after form submission
 		redcap_show_error_messages();?>
@@ -101,7 +102,7 @@ function redcap_add_new_member() {
 		$user_email		= $_POST["redcap_user_email"];
 		$user_first 	= $_POST["redcap_user_first"];
 		$user_last	 	= $_POST["redcap_user_last"];
-		$user_pass	= wp_generate_password(); //$_POST["redcap_password"];
+		$user_pass	    = wp_generate_password(); //$_POST["redcap_password"];
 		$record_id		= $_POST["redcap_record_id"];
 
 		// this is required for username checks
@@ -119,10 +120,6 @@ function redcap_add_new_member() {
 			//Email address already registered
 			redcap_errors()->add('email_used', __('Email already registered'));
 		}
-		/*if($user_pass == '') {
-			// password field is empty
-			redcap_errors()->add('password_empty', __('Please enter a password'));
-		}*/
 		if(!check_record($record_id) and !$record_id=='') {
 			// Record ID input does not exist in redcap
 			redcap_errors()->add('no_record_id', __('Record ID does not exist in RedCap'));

@@ -41,7 +41,7 @@ function redcap_login_form() {
  
 		$output = redcap_login_form_fields();
 	} 
-	else if ($_SESSION["level"] >=9 ){ print_r($_SESSION); wp_redirect("/registration"); exit;}
+	else if ($_SESSION["level"] >=9 ){ wp_redirect("/registration/"); exit;}
 	else {wp_redirect("/my_account"); exit;}
 	
 	return $output;
