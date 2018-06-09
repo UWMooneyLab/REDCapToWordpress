@@ -5,7 +5,7 @@ function redcap_login_form_fields() {
 	ob_start(); ?>
 		<?php
 		// show any error messages after form submission
-		redcap_show_error_messages(); ?>
+		echo redcap_show_error_messages(); ?>
  
 		<form id="redcap_login_form"  class="redcap_form" action="" method="post">
 			<fieldset>
@@ -41,7 +41,7 @@ function redcap_login_form() {
  
 		$output = redcap_login_form_fields();
 	} 
-	else if ($_SESSION["level"] >=9 ){ wp_redirect("/registration/"); exit;}
+	else if ($_SESSION["level"] >=9 ){ wp_redirect("/registration"); exit;}
 	else {wp_redirect("/my_account"); exit;}
 	
 	return $output;
@@ -73,7 +73,7 @@ function redcap_login_member() {
 		if (!empty($user)) {
 			if (!wp_check_password($_POST['redcap_user_pass'], $user->user_pass, $user->ID)) {
 			 //if the password is incorrect for the specified user
-			redcap_errors()->add('empty_password', __('Incorrect password'));
+			redcap_errors()->add('incorrect_password', __('Incorrect password'));
 		}
 		}
  

@@ -34,8 +34,6 @@ register_activation_hook( __FILE__, 'activate_redcap' );
 register_uninstall_hook(__FILE__, 'uninstall_redcap' );
 
 
-
-
 // deletes the user from the wp_redcap database when a user is deleted on the wordpress site.
 // RedCap records are not deleted or altered.
 function delete_user_from_redcap( $user_id ) {
@@ -152,13 +150,15 @@ function redcap_show_error_messages() {
 	
 	//displays the error messages found in redcap_errors()
 	if($codes = redcap_errors()->get_error_codes()) {
-		echo '<div class="redcap_errors">';
+	    $errors = "";
+		$errors .= '<div class="redcap_errors">';
 		    // Loop error codes and display errors
 		   foreach($codes as $code){
 		        $message = redcap_errors()->get_error_message($code);
-		        echo '<span class="error"><strong>' . __('Error') . '</strong>: ' . $message . '</span><br/>';
+               $errors .= '<span class="error"><strong>' . __('Error') . '</strong>: ' . $message . '</span><br/>';
 		    }
-		echo '</div>';
+		    $errors .= '</div>';
+		   return $errors;
 	}
 
    	else if($GLOBALS['success']==TRUE) {

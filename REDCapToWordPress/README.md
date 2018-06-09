@@ -78,7 +78,8 @@ which IP addresses can query the server. We store the REDCap API token on this s
 and have built a Flask app API that can be run on this middleman. This is not an airtight
 solution, but it adds another layer of protection to your data. A diagram of the information
 flow is shown.
-> add image
+
+![security overview](images/security_overview.png)
 
 ### Configuration
 

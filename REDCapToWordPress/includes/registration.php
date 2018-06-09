@@ -11,7 +11,7 @@ function registration_form_fields() {
 	ob_start(); ?>
 		<?php 
 		// show any error messages after form submission
-		redcap_show_error_messages();?>
+		echo redcap_show_error_messages();?>
         <div style="width:100%;">
 		<form id="redcap_registration_form" class="redcap_form" method="POST" style="float:left;">
 			<fieldset>
